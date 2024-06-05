@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% include "partials/head.html" %}
+</head>
+
+<body>
+    <div class="blur"></div>
+    {% include "partials/header.html" %}
+
+  
+
+    {% block content %}{% endblock content %}
+
+    <div class="button">
+        <i class="fa-solid fa-plus"></i>
+    </div>
+
+    <div class="adding-content">
+        <i class="fa-solid fa-close closer"></i>
+        <h2>Adicione conteúdo ao blog:</h2>
+        <form method="post" action="">
+            <label for="title">Título</label>
+            <input type="text" id="title" name="title" required placeholder="Adicione um título">
+
+            <label for="content">Conteúdo</label>
+            <textarea id="content" name="content" required placeholder="Adicione conteúdo para seu artigo"></textarea>
+
+            <label for="tags">Tags</label>
+            <input type="text" id="tags" name="tags" placeholder="Adicione palavras-chave separadas por vírgulas">
+
+            <div class="buttons">
+                <input id="cancel" type="reset" value="Cancelar" name="cancelar">
+                <input type="submit" value="Publicar" name="publicar">
+            </div>
+
+        </form>
+
+    </div>
+
+    {%include "partials/footer.html" %}
+</body>
+
+</html>

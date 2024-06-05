@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --background-color: #1a1a1a; /* Preto um pouco mais claro */
+    --primary-color: #3498db; /* Cor primária para destaque */
+    --secondary-color: #ffffff; /* Cor secundária branca */
+    --background-gradient: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+    --other-color: #858585;
+    --secundary-background-color: rgba(87, 87, 87, 0.5);
+  }
+  
+
+html, body{
+    height: 100%;
+    background:  var(--background-gradient);
+    background-attachment: fixed;
+}
+
+input:focus, 
+textarea:focus{
+    outline: none;
+}
+
+div.container{
+    max-width: 1400px;
+    padding: 0 2%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blur{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: var(--background-color);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+header{
+    padding: 20px 0;
+}
+
+header .logo{
+    width: 100%;
+    text-align: center;
+}
+
+header h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
+.code{
+    width: 100%;
+    text-align: left;
+    color: var(--other-color);
+    font-family: Courier, monospace;
+    font-size: 40px;
+    
+}
+
+.code h2{
+    display: inline-block;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.code p{
+    margin-left: 70px;
+}
+.code b{
+    color: var(--primary-color);
+}
+
+
+section.search .container{
+    justify-content: right;
+    align-items: center;
+}
+
+section.search .search-box{
+    padding: 7px 15px;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    color: var(--background-color);
+}
+
+.search-box input{
+    border: 0;
+    margin-left: 5px;
+
+}
+
+
+section.blog-content{
+    padding: 30px 0;
+}
+
+section.blog-content .subject{
+    width: 32%;
+    margin: 10px;
+    text-align: left;
+    margin: 20px 0;
+    border-radius: 30px;
+    background-color: var(--secundary-background-color);
+    padding: 20px;
+
+}
+
+section.blog-content .subject h1{
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+section.blog-content .subject span{
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+    color: var(--other-color);
+}
+
+
+section.blog-content .subject p{
+    margin-top: 15px;
+    font-size: 15px;
+    color: var(--secondary-color);
+}
+
+
+section.blog-content .subject .infos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+section.blog-content .subject a{
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    font-size: 15px;
+    color: var(--secondary-color);
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    font-weight: 400;
+}
+
+.button{
+    cursor: pointer;
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 25px;
+    line-height: 39px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+.adding-content{
+    padding: 30px;
+    width: 96%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--secundary-background-color);
+    border-radius: 40px;
+    position: fixed;
+    z-index: 4;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,0);
+    right: 50%;
+    display: none;
+}
+.adding-content .closer{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 20px;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.adding-content h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.adding-content form{
+    margin-top: 20px;
+}
+
+.adding-content form label{
+    display: block;
+    margin: 20px 0 10px 0;
+    color: var(--other-color);
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.adding-content form input,
+.adding-content form textarea{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 20px;
+    padding-left: 10px;
+    color: var(--background-color);
+}
+
+.adding-content form textarea{
+    height: 120px;
+    padding-top: 10px;
+    resize: none;
+}
+
+.adding-content form .buttons{
+    display: flex;
+    justify-content: right;
+}
+
+
+.adding-content form .buttons input{
+    width: 100px;
+    border-radius: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.adding-content form .buttons input[type=submit]{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin-left: 10px;
+}
+.adding-content form .buttons input[type=reset]{
+    background-color: var(--other-color);
+    color: var(--background-color);
+}
+
+
+
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer h1{
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+    color: var(--other-color);
+}
+
+/* POST DETAILS  */
+
+section.content{
+    padding: 30px 0;
+    color: var(--secondary-color);
+}
+
+section.content .container{
+    text-align: left;
+}
+
+section.content h2{
+    width: 100%;
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+section.content span{
+    color: var(--other-color);
+    margin-top: 10px;
+}
+
+section.content span b{
+    color: var(--secondary-color);
+}
+section.content .texto{
+    margin-top: 40px;
+}
+section.content p{
+    text-align: justify;
+    margin: 10px 0;
+}
+
+
+
+@media screen and (max-width: 768px){
+    section.blog-content .subject{
+        width: 100%;
+    }
+    section.search .container{
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.search .search-box{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    .button{
+        line-height: 42px;
+    }
+
+    .adding-content form .buttons{
+        justify-content: center;
+    }
+    
+}
