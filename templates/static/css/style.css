@@ -120,6 +120,8 @@ section.blog-content .subject{
     border-radius: 30px;
     background-color: var(--secundary-background-color);
     padding: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
 
 }
 

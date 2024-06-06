@@ -5,7 +5,7 @@
 <section class="content">
     <div class="container">
         <h2>{{post.title}}</h2>
-        <span>Por: <b>{{post.user}}</b> - Publicado em: 24/01/2023</span>
+        <span>Por: <b>{{post.user}}</b> - Publicado em: {{post.date}}</span>
         <div class="texto">
             <p>{{post.text}}</p>
         </div>
@@ -13,7 +13,6 @@
         <span>{{post.tags}}</span>
     </div>
 </section>
-
 {% endblock content %}
 
 

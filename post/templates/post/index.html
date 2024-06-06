@@ -5,15 +5,17 @@
 <section class="blog-content">
     <div class="container">
         {% for post in posts %}
+        {%if post.isVisible%}
         <div class="subject">
             <h1>{{post.title}}</h1>
             <span>{{post.tags}}</span>
-            <p>{{post.text}}</p>
+            <p>{{post.text|truncatewords:30}}</p>
             <div class="infos">
                 <a href="{% url 'post_details' post.id%}">Ver mais</a>
-                <span>29/04/2023</sp>
+                <span>{{post.date}}</sp>
             </div>
         </div>
+        {%endif%}
         {% endfor %}
     </div>
 </section>

@@ -109,15 +109,19 @@ section.search .search-box{
 section.blog-content{
     padding: 30px 0;
 }
+section.blog-content .container{
+    justify-content: unset;
+}
 
 section.blog-content .subject{
-    width: 32%;
-    margin: 10px;
+    width: 31%;
     text-align: left;
-    margin: 20px 0;
+    margin: 20px 10px;
     border-radius: 30px;
     background-color: var(--secundary-background-color);
     padding: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
 
 }
 
@@ -288,6 +292,7 @@ section.content{
 
 section.content .container{
     text-align: left;
+    
 }
 
 section.content h2{
@@ -305,6 +310,7 @@ section.content span b{
     color: var(--secondary-color);
 }
 section.content .texto{
+    width: 100%;
     margin-top: 40px;
 }
 section.content p{
@@ -314,7 +320,7 @@ section.content p{
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 960px){
     section.blog-content .subject{
         width: 100%;
     }

@@ -2,5 +2,9 @@ from django.contrib import admin
 
 from . import models
 
-admin.site.register(models.Post)
-# Register your models here.
+
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'isVisible')
+    list_editable = ('isVisible',)
+
+admin.site.register(models.Post, PostAdmin)
