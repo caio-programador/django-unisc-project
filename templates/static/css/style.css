@@ -213,6 +213,13 @@ section.blog-content .subject a{
     color: var(--primary-color);
 }
 
+.adding-content span{
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    color: var(--secondary-color);
+}
+
 .adding-content form{
     margin-top: 20px;
 }
@@ -314,6 +321,7 @@ section.content a:hover{
 section.content h2{
     width: 100%;
     font-size: 30px;
+    
     color: var(--primary-color);
     margin-top: 15px;
 }

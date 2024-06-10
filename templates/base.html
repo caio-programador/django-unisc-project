@@ -22,6 +22,7 @@
     <div class="adding-content">
         <i class="fa-solid fa-close closer"></i>
         <h2>Adicione conteúdo ao blog:</h2>
+        <span>*Toda nova publicação passará pela equipe responsável pelo blog para poder ser exibida!</span>
         <form method="post" action="">
             {% csrf_token %}
             {{ form.as_p }}
